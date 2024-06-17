@@ -54,7 +54,7 @@ __declspec(dllexport) int __cdecl decide(
 
 	if (hatCost == 0) exchange_hat = 1;
 	if (bookCost == 0) exchange_book = 2;
-	else if (ballCost == 0) exchange_balls = 3;
+	if (ballCost == 0) exchange_balls = 3;
 	vector< Subject> subj = { {HAT,hatCost, hatCount},{BOOK, bookCost,bookCount },{BALL,ballCost, ballCount } };
 	vector< Subject> full_subj = { {HAT,hatCost, 1},{BOOK, bookCost,2 },{BALL,ballCost, 3 } };
 	sort(subj.begin(), subj.end(), CompareClass);
